@@ -1,26 +1,62 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <!--
+    <img alt="Vue logo" src="./assets/logo.png">
+    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  -->
+  <HomeView />
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import { defineComponent } from 'vue'
+//import HelloWorld from './components/HelloWorld.vue'
+import HomeView from './components/Home.vue'
 
-export default {
+export default defineComponent({
   name: 'App',
   components: {
-    HelloWorld
+    HomeView,
   }
-}
+})
 </script>
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Sorts+Mill+Goudy&display=swap');
+@font-face {
+  font-family: "Ogg Regular";
+  src: url(../src/assets/font/Ogg-Regular-BF646c18fc3ed57.otf) format(OpenType);
+}
+@font-face {
+  font-family: "Ranua";
+  src: url(../src/assets/font/RanuaTrials-Light.otf) format(OpenType);
+}
+@font-face {
+  font-family: "Ranua Regular";
+  src: url(../src/assets/font/RanuaTrials-Regular.otf) format(OpenType);
+}
+@font-face {
+  font-family: "Rebond Grotesque";
+  src: url(../src/assets/font/Rebond\ Grotesque.otf) format(OpenType);
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0px;
+  background: #4F4386;
+  overflow-x: hidden;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Rebond Grotesque", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
 }
 </style>
