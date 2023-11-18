@@ -1,5 +1,5 @@
 <template>
-    <main class="main-container">
+    <main class="main-container" v-lenis>
         <header class="header">
             <div class="logo">
                 YS<span class="logo-span">©</span>
@@ -39,15 +39,41 @@
             </div>
         </section>
         <div class="coating"></div>
-        <div class="grobe"></div>
+        <div class="grobe">
+            <img src="../assets/images/Maskgroup.png" alt="" class="grobe-img">
+        </div>
         <div class="noise"></div>
         <section class="visual-works">
-            <div class="image-card"></div>
-            <div class="image-card"></div>
-            <div class="image-card"></div>
-            <div class="image-card"></div>
-            <div class="image-card"></div>
-            <div class="image-card"></div>
+            <div class="image-card">
+                <p class="image-card-year">/2021</p>
+                <img src="../assets/images/image178.png" alt="" class="image-card-photo">
+                <p class="image-card-name">(Glamour UK)</p>
+            </div>
+            <div class="image-card">
+                <p class="image-card-year">/2018</p>
+                <img src="../assets/images/image181.png" alt="" class="image-card-photo">
+                <p class="image-card-name">(Peter Pan & Wendy)</p>
+            </div>
+            <div class="image-card">
+                <p class="image-card-year">/2019</p>
+                <img src="../assets/images/image180.png" alt="" class="image-card-photo">
+                <p class="image-card-name">(Dior Forever)</p>
+            </div>
+            <div class="image-card">
+                <p class="image-card-year">/2019</p>
+                <img src="../assets/images/image182.png" alt="" class="image-card-photo">
+                <p class="image-card-name">(Selfish Season)</p>
+            </div>
+            <div class="image-card">
+                <p class="image-card-year">/2020</p>
+                <img src="../assets/images/image184.png" alt="" class="image-card-photo">
+                <p class="image-card-name">(New Fashion)</p>
+            </div>
+            <div class="image-card">
+                <p class="image-card-year">/2017</p>
+                <img src="../assets/images/image183.png" alt="" class="image-card-photo">
+                <p class="image-card-name">(Amazing Road)</p>
+            </div>
         </section>
         <p>Hello everyone!</p>
     </main>
@@ -68,7 +94,8 @@
         justify-content: space-between;
         align-items: center;
         width: 100%;
-        margin-bottom: 2.5rem;
+        margin-bottom: 1.09rem;
+        z-index: 2;
     }
     .logo {
         color: #E9E1FE;
@@ -139,6 +166,7 @@
     .landing {
         position: relative;
         width: 100%;
+        height: 61.9375rem;
     }
     .content {
         position: absolute;
@@ -147,7 +175,8 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        z-index: 3;
+        z-index: 2;
+        
     }
     .hero-img {
         width: 35.3125rem;
@@ -182,11 +211,11 @@
     }
     .coating {
         position: absolute;
-        top: 0;
+        top: -1.5rem;
         left: 0;
         width: 100vw;
         height: 60.625rem;
-        background: linear-gradient(173deg, #000 70.16%, rgba(217, 217, 217, 0.00) 87.42%);
+        background: linear-gradient(173deg, #000 45.16%, rgba(217, 217, 217, 0.00) 87.42%);
         z-index: -2;
         opacity: 0.22;
     }
@@ -196,13 +225,19 @@
         left: 0;
         width: 100vw;
         height: 60.625rem;
-        opacity: 0.22;
-        background: url("../assets/images/Mask group.png"), lightgray 50% / cover no-repeat;
+        opacity: 1;
+    }
+    img.grobe-img {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
         mix-blend-mode: hard-light;
-        filter: blur(20px);
         z-index: -1;
     }
     .noise {
+        display: none;
         position: absolute;
         top: 0;
         bottom: 0;
@@ -210,12 +245,86 @@
         width: 100dvw;
         height: 200%;
         opacity: 0.05;
-        background: url("../assets/images/Noise & Texture.png"), lightgray 0% 0% / 50px 50px repeat;
+        background: url("../assets/images/Noise&Texture.png"), lightgray 0% 0% / 50px 50px repeat;
     }
     .visual-works {
         display: grid;
-        grid-template-columns: repeat(2, 1fr) 1fr;
-        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: 1fr 1fr auto;
+        grid-template-rows: auto auto;
+        width: 100%;
+        margin-top: 11.5rem;
+        row-gap: 8.38rem;
+        column-gap: 5rem;
+    }
+    .visual-works div:nth-child(5) {
+        max-width: 26.4375rem;
+    }
+    .image-card {
+        width: fit-content;
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+    .image-card:nth-of-type(1) > img {
+        width: 16.3125rem;
+        height: 19.6875rem;
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+    }
+    .image-card:nth-of-type(2) > img {
+        width: 26.4375rem;
+        height: 32.0625rem;
+        flex-shrink: 0;
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+    }
+    .image-card:nth-of-type(3) > img {
+        width: 10.5rem;
+        height: 13.0625rem;
+        grid-column: 3 / 4;
+        grid-row: 1 / 2;
+    }
+    .image-card:nth-of-type(4) > img {
+        width: 26.4375rem;
+        height: 30rem;
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+    }
+    .image-card:nth-of-type(5) {
+        max-width: 26.4375rem;
+        justify-self: flex-end;
+    }
+    .image-card:nth-of-type(5) > img {
+        width: 10.625rem;
+        height: 13.1875rem;
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
+    }
+    .image-card:nth-of-type(6) > img {
+        width: 16.3125rem;
+        height: 20.25rem;
+        grid-column: 3 / 4;
+        grid-row: 2 / 3;
+    }
+    p.image-card-year {
+        color: #EBE8FF;
+        font-family: "Rebond Grotesque", serif;
+        font-size: 0.75rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 100%; /* 0.75rem */
+        letter-spacing: -0.03rem;
+        text-transform: uppercase;
+    }
+    p.image-card-name {
+        color: #EBE8FF;
+        font-family: "Ogg Regular", serif;
+        font-size: 1.5rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 90%; /* 1.35rem */
     }
 </style>
 

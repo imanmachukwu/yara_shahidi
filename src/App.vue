@@ -10,6 +10,22 @@
 import { defineComponent } from 'vue'
 //import HelloWorld from './components/HelloWorld.vue'
 import HomeView from './components/Home.vue'
+import Lenis from '@studio-freight/lenis'
+
+const lenis = new Lenis({
+  duration: 2,
+})
+
+lenis.on('scroll', (e) => {
+  console.log(e)
+})
+
+function raf(time) {
+  lenis.raf(time)
+  requestAnimationFrame(raf)
+}
+
+requestAnimationFrame(raf)
 
 export default defineComponent({
   name: 'App',
@@ -58,5 +74,25 @@ body::-webkit-scrollbar {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
+}
+
+html.lenis {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
 }
 </style>
