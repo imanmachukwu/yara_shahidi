@@ -84,31 +84,51 @@
         <section id="awards">
             <h3 class="awards-text">Awards</h3>
             <ul id="awards-list">
-                <li>
+                <li @mouseover="showElement('naacp')" @mouseleave="hideElement('naacp')" id="naacp">
                     <p class="award-name">NAACP</p>
                     <p class="award-date">la / 2022</p>
                 </li>
-                <li>
+                <li @mouseover="showElement('webby')" @mouseleave="hideElement('webby')" id="webby">
                     <p class="award-name">The Webby Awards</p>
                     <p class="award-date">nyc / 2021</p>
                 </li>
-                <li>
+                <li @mouseover="showElement('reel')" @mouseleave="hideElement('reel')" id="reel">
                     <p class="award-name">Black Reel Awards</p>
                     <p class="award-date">sf / 2021</p>
                 </li>
-                <li>
+                <li @mouseover="showElement('choice')" @mouseleave="hideElement('choice')" id="choice">
                     <p class="award-name">People's Choice</p>
                     <p class="award-date">la / 2019</p>
                 </li>
-                <li>
+                <li @mouseover="showElement('mtv')" @mouseleave="hideElement('mtv')" id="mtv">
                     <p class="award-name">MTV Movie</p>
                     <p class="award-date">la / 2018</p>
                 </li>
-                <li>
+                <li @mouseover="showElement('artist')" @mouseleave="hideElement('artist')" id="artist">
                     <p class="award-name">Young Artist Awards</p>
                     <p class="award-date">sf / 2017</p>
                 </li>
             </ul>
+            <div v-show="showNaacp === true" id="naacp-hover">
+                <img src="../assets/images/naacp.png" alt="NAACP logo" />
+            </div>
+            <div v-show="showWebby" id="webby-hover">
+                <img src="../assets/images/the-webby-awards.png" alt="The Webby Awards logo" />
+            </div>
+            <div v-show="showReel" id="black-reel-hover">
+                <img src="../assets/images/black-reel.png" alt="Black Reel logo" />
+            </div>
+            <div v-show="showChoice" id="people-choice-hover">
+                <img src="../assets/images/people-choice.png" alt="People's Choice logo" />
+            </div>
+            <div v-show="showMtv" id="mtv-hover">
+                <svg width="331" height="251" viewBox="0 0 331 251" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M0 251V0H123.672L146.032 24.8211L167.57 0H274.68L294.559 22.3686V47.4996L304 38.3096C308.424 34.2671 312.55 32.4884 315.868 32.4884C324.985 32.4884 331.054 41.072 331.054 56.3931C329.705 67.7257 318.08 73.9107 312.281 82.1305C308.14 87.9517 298.47 100.214 294.33 106.035V231.353L275.57 250.973H167.678V163.655L145.048 186.333L124.616 170.163V230.154L104.629 251H0ZM104.629 154.775V241.204L117.333 227.405V164.584L104.629 154.775ZM275.516 138.793V242.996L288.207 228.591V117.381L275.516 138.793ZM275.516 10.0793V75.7029L288.49 55.1669V24.5111L275.516 10.0793ZM212.844 100.214L210.633 104.823C209.278 107.365 208.613 110.217 208.704 113.096C208.704 129.94 227.194 149.56 229.959 165.797C232.171 186.01 237.134 196.143 244.592 196.143C245.615 196.008 246.629 195.805 247.626 195.537C253.978 195.537 254.248 185.417 255.084 176.523C256.19 168.869 261.153 161.512 261.989 156.917C271.929 135.465 272.428 133.929 284.566 114.309C288.706 104.876 295.611 96.7914 301.127 87.9517C309.408 73.5469 325.403 66.4994 325.403 47.5265C325.403 43.2415 321.532 37.4068 315.733 37.4068C296.137 41.7053 275.975 86.1461 266.319 103.61C264.39 107.288 260.25 122.92 258.308 127.218C251.969 133.956 252.522 146.824 241.476 146.824C237.889 142.782 230.431 99.9311 227.113 99.0148C225.076 97.1409 222.436 96.0561 219.669 95.9559C216.985 95.929 214.773 97.4517 212.844 100.214ZM154.852 100.214C149.606 106.655 141.366 111.87 134.434 117.071C133.089 118.511 132.052 120.209 131.387 122.063C130.721 123.916 130.441 125.886 130.563 127.851C130.563 130.924 131.399 132.756 133.598 133.983C134.649 134.413 135.779 134.619 136.915 134.589C140.503 134.589 144.643 132.15 149.336 126.625C160.126 114.363 167.826 103.637 180.814 101.494C180.814 103.947 184.671 119.578 184.671 122.03C184.671 131.22 185.507 148.077 185.507 156.055C185.349 163.849 184.7 171.626 183.565 179.34C182.962 182.579 182.593 185.857 182.459 189.149C182.672 194.354 183.579 199.506 185.157 204.471C186.263 208.149 185.157 219.185 190.673 219.185C191.513 219.931 192.585 220.364 193.707 220.412C199.506 220.412 202.824 209.632 202.824 195.591C201.197 188.24 200.365 180.736 200.342 173.208V161.566C201.165 148.387 201.691 140.114 201.691 136.125C201.76 134.066 201.574 132.007 201.138 129.994C200.868 125.951 197.281 110.684 197.281 106.709C197.333 102.507 198.472 98.3898 200.585 94.7566C206.384 81.888 219.911 72.6845 241.719 67.4831C245.86 65.3406 247.802 62.2683 247.802 58.8995C247.802 54.857 244.214 52.7683 237.012 52.7683C222.932 52.7683 211.388 69.3157 197.537 70.2859C185.939 71.2157 181.798 69.0597 173.801 87.4532C173.369 88.9354 156.255 98.368 154.866 100.214H154.852Z" fill="#7869BD"/>
+</svg>
+            </div>
+            <div v-show="showArtist" id="young-artist-hover">
+                <img src="../assets/images/young-artist-academy.png" alt="Young Artist Academy logo" />
+            </div>
         </section>
         <section id="about-container">
             <div id="about-info">
@@ -435,6 +455,7 @@ Minnesota, HEN</p>
         display: flex;
         justify-content: space-between;
         margin-top: 12rem;
+        position: relative;
     }
     h3.awards-text {
         color: #EBE8FF;
@@ -449,6 +470,7 @@ text-transform: uppercase;
     ul#awards-list {
         width: 47.8rem;
         list-style: none;
+        z-index: 2;
     }
     ul#awards-list > li {
         padding: 2rem 0px;
@@ -456,9 +478,13 @@ text-transform: uppercase;
         display: flex;
         justify-content: space-between;
         border-bottom: 1px solid #B9B4DF;
+        z-index: 2;
     }
     ul#awards-list > li:nth-of-type(1) {
         border-top: 1px solid #b9b4df;
+    }
+    ul#awards-list > li:hover > p{
+        font-style: italic;
     }
     p.award-name {
         color: #EBE8FF;
@@ -478,6 +504,36 @@ font-weight: 400;
 line-height: 90%; /* 1.0125rem */
 letter-spacing: -0.01125rem;
 text-transform: uppercase;
+    }
+    #naacp-hover {
+        position: absolute;
+        top: 10.88rem;
+        left: 6.19rem;
+    }
+    #webby-hover {
+        position: absolute;
+        top: 6.42rem;
+        left: 11.94rem;
+    }
+    #black-reel-hover {
+        position: absolute;
+        top: 11.31rem;
+        left: 12.15rem;
+    }
+    #people-choice-hover {
+        position: absolute;
+        top: 12.94rem;
+        left: 11.87rem;
+    }
+    #mtv-hover {
+        position: absolute;
+        top: 13.12rem;
+        left: 11.94rem;
+    }
+    #young-artist-hover {
+        position: absolute;
+        top: 7.44rem;
+        left: 9.19rem;
     }
     #about-container {
         margin-top: 14rem;
@@ -672,10 +728,101 @@ gsap.registerPlugin(ScrollTrigger);
 
 // gsap.ticker.lagSmoothing(0)
 
+// const naacp = document.getElementById('naacp');
+// const webby = document.getElementById('webby');
+// const reel = document.getElementById('reel');
+// const choice = document.getElementById('choice');
+// const mtv = document.getElementById('mtv');
+// const naacphover = document.getElementById('naacp-hover');
+// const artist = document.getElementById('artist');
+// const webbyhover = document.getElementById('webby-hover');
+// const blackreelhover = document.getElementById('black-reel-hover');
+// const peoplechoicehover = document.getElementById('people-choice-hover');
+// const mtvhover = document.getElementById('mtv-hover');
+// const youngartisthover = document.getElementById('young-artist-hover');
+
+// naacp.addEventListener('mouseover', function onHover() {
+//     naacphover.style.display = 'block';
+// });
+
+// webby.addEventListener('mouseover', function onHover() {
+//     webbyhover.style.display = 'block';
+// });
+
+// reel.addEventListener('mouseover', function onHover() {
+//     blackreelhover.style.display = 'block';
+// });
+
+// choice.addEventListener('mouseover', function onHover() {
+//     peoplechoicehover.style.display = 'block';
+// });
+
+// mtv.addEventListener('mouseover', function onHover() {
+//     mtvhover.style.display = 'block';
+// });
+
+// artist.addEventListener('mouseover', function onHover() {
+//     youngartisthover.style.display = 'block';
+// });
+
 export default defineComponent({
     name: "HomeView",
-    setup() {
-        
+    data() {
+        return {
+            showNaacp: false,
+            showWebby: false,
+            showReel: false,
+            showChoice: false,
+            showMtv: false,
+            showArtist: false,
+        }
     },
-})
+    methods: {
+        showElement(element) {
+            this.showNaacp = false;
+            this.showWebby = false;
+            this.showReel = false;
+            this.showChoice = false;
+            this.showMtv = false;
+            this.showArtist = false;
+
+            if (element === "naacp") {
+                this.showNaacp = true;
+                console.log('yeh!');
+            } else if (element === "webby") {
+                this.showWebby = true;
+            } else if (element === "reel") {
+                this.showReel = true;
+            } else if (element === "choice") {
+                this.showChoice = true;
+            } else if (element === "mtv") {
+                this.showMtv = true;
+            } else if (element === "artist") {
+                this.showArtist = true;
+            }
+        },
+        hideElement(element) {
+            this.showNaacp = false;
+            this.showWebby = false;
+            this.showReel = false;
+            this.showChoice = false;
+            this.showMtv = false;
+            this.showArtist = false;
+
+            if (element === "naacp") {
+                this.showNaacp = false;
+            } else if (element === "webby") {
+                this.showWebby = false;
+            } else if (element === "reel") {
+                this.showReel = false;
+            } else if (element === "choice") {
+                this.showChoice = false;
+            } else if (element === "mtv") {
+                this.showMtv = false;
+            } else if (element === "artist") {
+                this.showArtist = false;
+            }
+        }
+    },
+});
 </script>
