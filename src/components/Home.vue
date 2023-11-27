@@ -1,13 +1,19 @@
 <template>
-    <main class="main-container" v-lenis>
+    <main class="main-container" data-lenis>
         <header class="header">
             <div class="logo">
                 YS<span class="logo-span">©</span>
             </div>
             <ul class="menu">
-                <li class="menu-item">Works</li>
-                <li class="menu-item">About</li>
-                <li class="menu-item">Contact</li>
+                <li class="menu-item">
+                    <a href="#visual-works">Works</a>
+                </li>
+                <li class="menu-item">
+                    <a href="#about-container" onclick="lenis.scrollTo('#about-container')">About</a>
+                </li>
+                <li class="menu-item">
+                    <a href="#contact" onclick="lenis.scrollTo('#contact')">Contact</a>
+                </li>
             </ul>
             <div class="book-button">
                 <svg class="book-btn-svg" xmlns="http://www.w3.org/2000/svg" width="165" height="58" viewBox="0 0 165 58" fill="none">
@@ -43,7 +49,7 @@
             <img src="../assets/images/Maskgroup.png" alt="" class="grobe-img">
         </div>
         <div class="noise"></div>
-        <section class="visual-works">
+        <section id="visual-works">
             <div class="image-card">
                 <p class="image-card-year">/2021</p>
                 <img src="../assets/images/image178.png" alt="" class="image-card-photo">
@@ -74,6 +80,35 @@
                 <img src="../assets/images/image183.png" alt="" class="image-card-photo">
                 <p class="image-card-name">(Amazing Road)</p>
             </div>
+        </section>
+        <section id="awards">
+            <p class="awards-text">Awards</p>
+            <ul id="awards-list">
+                <li>
+                    <p class="award-name">NAACP</p>
+                    <p class="award-date">la / 2022</p>
+                </li>
+                <li>
+                    <p class="award-name">The Webby Awards</p>
+                    <p class="award-date">nyc / 2021</p>
+                </li>
+                <li>
+                    <p class="award-name">Black Reel Awards</p>
+                    <p class="award-date">sf / 2021</p>
+                </li>
+                <li>
+                    <p class="award-name">People's Choice</p>
+                    <p class="award-date">la / 2019</p>
+                </li>
+                <li>
+                    <p class="award-name">MTV Movie</p>
+                    <p class="award-date">la / 2018</p>
+                </li>
+                <li>
+                    <p class="award-name">Young Artist Awards</p>
+                    <p class="award-date">sf / 2017</p>
+                </li>
+            </ul>
         </section>
         <section id="about-container">
             <div id="about-info">
@@ -125,7 +160,7 @@ Her work can be seen in her gallery or on IMDB.
   <path d="M3111 236.015C3111 325.336 3083.6 415.081 3045.03 459.107C3042.75 461.647 3040.47 458.26 3042.5 455.297C3079.54 411.271 3103.13 322.373 3103.13 236.015C3103.13 149.656 3081.06 58.2182 3044.02 14.1924C3041.73 11.2291 3044.27 8.26583 3046.3 10.3825C3085.12 54.4082 3111 146.693 3111 236.015Z" fill="#EAE7FF"/>
 </svg>
         </section>
-        <footer>
+        <footer id="contact">
             <p class="copyright-text">©Yara Shahidi, 2023</p>
             <div class="footer-groups">
                 <div class="contact-links">
@@ -200,6 +235,10 @@ Minnesota, HEN</p>
         line-height: 90%; /* 1.35rem */
         letter-spacing: -0.015rem;
         text-transform: uppercase;
+    }
+    a {
+        text-decoration: none;
+        color: inherit;
     }
     .book-button {
         width: 10.3125rem;
@@ -291,6 +330,7 @@ Minnesota, HEN</p>
         width: 100vw;
         height: 60.625rem;
         opacity: 1;
+        z-index: -1;
     }
     img.grobe-img {
         position: relative;
@@ -312,7 +352,7 @@ Minnesota, HEN</p>
         opacity: 0.05;
         background: url("../assets/images/Noise&Texture.png"), lightgray 0% 0% / 50px 50px repeat;
     }
-    .visual-works {
+    #visual-works {
         display: grid;
         grid-template-columns: 1fr 1fr auto;
         grid-template-rows: auto auto;
@@ -321,8 +361,11 @@ Minnesota, HEN</p>
         row-gap: 8.38rem;
         column-gap: 5rem;
     }
-    .visual-works div:nth-child(5) {
+    #visual-works div:nth-child(5) {
         max-width: 26.4375rem;
+    }
+    #visual-works:hover {
+        cursor: pointer;
     }
     .image-card {
         width: fit-content;
@@ -390,6 +433,54 @@ Minnesota, HEN</p>
         font-style: normal;
         font-weight: 400;
         line-height: 90%; /* 1.35rem */
+    }
+    #awards {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 12rem;
+    }
+    p.awards-text {
+        color: #EBE8FF;
+font-family: "Rebond Grotesque", sans-serif;
+font-size: 1.5rem;
+font-style: normal;
+font-weight: 400;
+line-height: 90%; /* 1.35rem */
+letter-spacing: -0.06rem;
+text-transform: uppercase;
+    }
+    ul#awards-list {
+        width: 47.8rem;
+        list-style: none;
+    }
+    ul#awards-list > li {
+        padding: 2rem 0px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid #B9B4DF;
+    }
+    ul#awards-list > li:nth-of-type(1) {
+        border-top: 1px solid #b9b4df;
+    }
+    p.award-name {
+        color: #EBE8FF;
+font-family: "Ogg Regular", serif;
+font-size: 3.125rem;
+font-style: normal;
+font-weight: 400;
+line-height: 90%; /* 2.8125rem */
+letter-spacing: -0.0625rem;
+    }
+    p.award-date {
+        color: #EBE8FF;
+font-family: "Ranua", sans-serif;
+font-size: 1.125rem;
+font-style: normal;
+font-weight: 400;
+line-height: 90%; /* 1.0125rem */
+letter-spacing: -0.01125rem;
+text-transform: uppercase;
     }
     #about-container {
         margin-top: 14rem;
@@ -464,11 +555,12 @@ letter-spacing: -0.045rem;
         width: 100%;
         height: fit-content;
         border-top: solid #B0A9E0 0.0625rem;
-        border-bottom: solid #B0A9E0 0.0625rem;
+        border-bottom: solid #B0A9E0 0.0625rem;;
     }
     .location > svg {
         position: relative;
         top: 3.5rem;
+        z-index: 2;
     }
     footer {
         margin-top: 5.13rem;
@@ -530,7 +622,58 @@ text-transform: uppercase;
 </style>
 
 <script>
-import { defineComponent } from 'vue'
+import { defineComponent } from 'vue';
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
+
+// const locator = document.getElementsByClassName("location")
+// const child = document.getElementsByTagName("svg")
+
+// import Lenis from '@studio-freight/lenis'
+
+// const lenis = new Lenis({
+//     wrapper: locator,
+//     content: child,
+//     duration: 2,
+//     orientation: 'horizontal',
+//     gestureOrientation: 'horizontal',
+// })
+
+// lenis.on('scroll', (e) => {
+//   console.log(e)
+// })
+
+// function raf(time) {
+//   lenis.raf(time)
+//   requestAnimationFrame(raf)
+// }
+
+// requestAnimationFrame(raf)
+
+// const sections = gsap.utils.toArray('.location')
+
+// // eslint-disable-next-line no-unused-vars
+// let scrollTween = gsap.to(sections, {
+//     xPercent: -100 * (sections.length - 1),
+//     ease: "none",
+//     scrollTrigger: {
+//         trigger: ".location",
+//         pin: true,
+//         scrub: 1,
+//         end: '+=2000',
+//     }
+// })
+
+// const lenis = new Lenis()
+
+// lenis.on('scroll', ScrollTrigger.update)
+
+// gsap.ticker.add((time)=>{
+//   lenis.raf(time * 1000)
+// })
+
+// gsap.ticker.lagSmoothing(0)
 
 export default defineComponent({
     name: "HomeView",

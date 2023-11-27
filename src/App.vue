@@ -16,6 +16,8 @@ const lenis = new Lenis({
   duration: 2,
 })
 
+console.log(lenis)
+
 lenis.on('scroll', (e) => {
   console.log(e)
 })
