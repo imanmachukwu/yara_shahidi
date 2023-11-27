@@ -82,7 +82,7 @@
             </div>
         </section>
         <section id="awards">
-            <p class="awards-text">Awards</p>
+            <h3 class="awards-text">Awards</h3>
             <ul id="awards-list">
                 <li>
                     <p class="award-name">NAACP</p>
@@ -364,9 +364,6 @@ Minnesota, HEN</p>
     #visual-works div:nth-child(5) {
         max-width: 26.4375rem;
     }
-    #visual-works:hover {
-        cursor: pointer;
-    }
     .image-card {
         width: fit-content;
         height: fit-content;
@@ -439,7 +436,7 @@ Minnesota, HEN</p>
         justify-content: space-between;
         margin-top: 12rem;
     }
-    p.awards-text {
+    h3.awards-text {
         color: #EBE8FF;
 font-family: "Rebond Grotesque", sans-serif;
 font-size: 1.5rem;

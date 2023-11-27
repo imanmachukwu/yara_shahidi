@@ -97,4 +97,8 @@ html.lenis {
 .lenis.lenis-scrolling iframe {
   pointer-events: none;
 }
+
+p, h1, h2, h3, h4, h5, h6 {
+  cursor: default;
+}
 </style>
