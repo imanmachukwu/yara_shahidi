@@ -263,14 +263,14 @@ Minnesota, HEN</p>
         height: 4.246vw;
         position: relative;
     }
-    .book-btn.svg {
+    svg.book-btn-svg {
         stroke-width: 1px;
         stroke: #E9E1FE;
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
-        height: 100%;
+        height: auto;
     }
     .book-btn {
         position: absolute;
