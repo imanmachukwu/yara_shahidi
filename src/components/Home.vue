@@ -306,7 +306,8 @@ Minnesota, HEN</p>
         background: linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.00) 40.22%), url("../assets/images/hero-image(1).png"), lightgray 0px -11.571px / 100% 127.909% no-repeat, url("../assets/images/hero-image(1).png"), lightgray 50% / cover no-repeat;
     }
     .hero-txt {
-        width: 100vw;
+        width: 100%;
+        height: auto;
         position: absolute;
         top: 35.49vw;
     }
@@ -618,6 +619,8 @@ letter-spacing: -0.053vw;
         border-bottom: solid #B0A9E0 0.073vw;;
     }
     .location > svg {
+        width: 100%;
+        height: auto;
         position: relative;
         top: 4.1vw;
         z-index: 2;
