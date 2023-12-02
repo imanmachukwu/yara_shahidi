@@ -9,10 +9,10 @@
                     <a href="#visual-works">Works</a>
                 </li>
                 <li class="menu-item">
-                    <a href="#about-container" onclick="lenis.scrollTo('#about-container')">About</a>
+                    <a href="#about-container">About</a>
                 </li>
                 <li class="menu-item">
-                    <a href="#contact" onclick="lenis.scrollTo('#contact')">Contact</a>
+                    <a href="#contact">Contact</a>
                 </li>
             </ul>
             <div class="book-button">
@@ -201,7 +201,7 @@ Minnesota, HEN</p>
 
 <style>
     .main-container {
-        padding: 2.5rem;
+        padding: 2.928vw;
         width: 100lvw;
         height: 100lvh;
         z-index: 1;
@@ -214,17 +214,17 @@ Minnesota, HEN</p>
         justify-content: space-between;
         align-items: center;
         width: 100%;
-        margin-bottom: 1.09rem;
+        margin-bottom: 1.277vw;
         z-index: 2;
     }
     .logo {
         color: #E9E1FE;
         font-family: "Sorts Mill Goudy", Helvetica, sans-serif;
-        font-size: 2rem;
+        font-size: 2.343vw;
         font-style: normal;
         font-weight: 400;
         line-height: 90%; /* 1.8rem */
-        letter-spacing: -0.02rem;
+        letter-spacing: -0.00.023vw;
         text-transform: uppercase;
         display: flex;
         align-items: flex-start;
@@ -232,16 +232,16 @@ Minnesota, HEN</p>
     .logo-span {
         color: #E9E1FE;
         font-family: "Sorts Mill Goudy", Helvetica, sans-serif;
-        font-size: 1rem;
+        font-size: 1.171vw;
         font-style: italic;
         font-weight: 400;
         line-height: 90%; /* 0.9rem */
-        letter-spacing: -0.01rem;
+        letter-spacing: -0.012vw;
         text-transform: uppercase;
     }
     ul.menu {
-        margin-left: 7.5rem;
-        width: 35.3125rem;
+        margin-left: 8.785vw;
+        width: 41.362vw;
         display: flex;
         justify-content: space-between;
         list-style: none;
@@ -249,11 +249,11 @@ Minnesota, HEN</p>
     .menu-item {
         color: #E9E1FE;
         font-family: "Rebond Grotesque", Arial, Helvetica, sans-serif;
-        font-size: 1.5rem;
+        font-size: 1.757vw;
         font-style: normal;
         font-weight: 400;
         line-height: 90%; /* 1.35rem */
-        letter-spacing: -0.015rem;
+        letter-spacing: -0.018vw;
         text-transform: uppercase;
     }
     a {
@@ -261,8 +261,8 @@ Minnesota, HEN</p>
         color: inherit;
     }
     .book-button {
-        width: 10.3125rem;
-        height: 3.625rem;
+        width: 12.079vw;
+        height: 4.246vw;
         position: relative;
     }
     .book-btn.svg {
@@ -276,21 +276,21 @@ Minnesota, HEN</p>
     }
     .book-btn {
         position: absolute;
-        right: 2.875rem;
-        top: 1.125rem;
+        right: 3.367vw;
+        top: 1.318vw;
         color: #E9E1FE;
         font-family: "Rebond Grotesque", Arial, Helvetica, sans-serif;
-        font-size: 1.5rem;
+        font-size: 1.757vw;
         font-style: normal;
         font-weight: 400;
         line-height: 90%; /* 1.35rem */
-        letter-spacing: -0.015rem;
+        letter-spacing: -0.018vw;
         text-transform: uppercase;
     }
     .landing {
         position: relative;
         width: 100%;
-        height: 61.9375rem;
+        height: 72.548vw;
     }
     .content {
         position: absolute;
@@ -303,14 +303,14 @@ Minnesota, HEN</p>
         
     }
     .hero-img {
-        width: 35.3125rem;
-        height: 42.9375rem;
+        width: 41.362vw;
+        height: 50.293vw;
         background: linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.00) 40.22%), url("../assets/images/hero-image(1).png"), lightgray 0px -11.571px / 100% 127.909% no-repeat, url("../assets/images/hero-image(1).png"), lightgray 50% / cover no-repeat;
     }
     .hero-txt {
-        width: 100%;
+        width: 100vw;
         position: absolute;
-        top: 30.3rem;
+        top: 35.49vw;
     }
     .flares {
         position: absolute;
@@ -319,26 +319,26 @@ Minnesota, HEN</p>
         display: flex;
     }
     .big-flare {
-        border-radius: 57.125rem;
+        border-radius: 66.911vw;
         opacity: 0.33;
         background: #815FD2;
         filter: blur(121.5px);
-        width: 57.125rem;
-        height: 57.125rem;
+        width: 66.911vw;
+        height: 66.911vw;
         position: absolute;
     }
     .flare-one {
-        left: -35.12rem;
+        left: -41.136vw;
     }
     .flare-two {
-        right: -14.75rem;
+        right: -17.277vw;
     }
     .coating {
         position: absolute;
-        top: -1.5rem;
+        top: -1.757vw;
         left: 0;
         width: 100vw;
-        height: 60.625rem;
+        height: 71.01vw;
         background: linear-gradient(173deg, #000 45.16%, rgba(217, 217, 217, 0.00) 87.42%);
         z-index: -2;
         opacity: 0.22;
@@ -348,7 +348,7 @@ Minnesota, HEN</p>
         top: 0;
         left: 0;
         width: 100vw;
-        height: 60.625rem;
+        height: 71.01vw;
         opacity: 1;
         z-index: -1;
     }
@@ -377,12 +377,12 @@ Minnesota, HEN</p>
         grid-template-columns: 1fr 1fr auto;
         grid-template-rows: auto auto;
         width: 100%;
-        margin-top: 11.5rem;
-        row-gap: 8.38rem;
-        column-gap: 5rem;
+        margin-top: 11.757vw;
+        row-gap: 9.816vw;
+        column-gap: 5.857vw;
     }
     #visual-works div:nth-child(5) {
-        max-width: 26.4375rem;
+        max-width: 30.966vw;
     }
     .image-card {
         width: fit-content;
@@ -390,63 +390,63 @@ Minnesota, HEN</p>
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        gap: 1rem;
+        gap: 1.171vw;
     }
     .image-card:nth-of-type(1) > img {
-        width: 16.3125rem;
-        height: 19.6875rem;
+        width: 19.107vw;
+        height: 23.06vw;
         grid-column: 1 / 2;
         grid-row: 1 / 2;
     }
     .image-card:nth-of-type(2) > img {
-        width: 26.4375rem;
-        height: 32.0625rem;
+        width: 30.966vw;
+        height: 37.555vw;
         flex-shrink: 0;
         grid-column: 2 / 3;
         grid-row: 1 / 2;
     }
     .image-card:nth-of-type(3) > img {
-        width: 10.5rem;
-        height: 13.0625rem;
+        width: 12.299vw;
+        height: 15.3vw;
         grid-column: 3 / 4;
         grid-row: 1 / 2;
     }
     .image-card:nth-of-type(4) > img {
-        width: 26.4375rem;
-        height: 30rem;
+        width: 30.966vw;
+        height: 35.139vw;
         grid-column: 1 / 2;
         grid-row: 2 / 3;
     }
     .image-card:nth-of-type(5) {
-        max-width: 26.4375rem;
+        max-width: 30.966vw;
         justify-self: flex-end;
     }
     .image-card:nth-of-type(5) > img {
-        width: 10.625rem;
-        height: 13.1875rem;
+        width: 12.445vw;
+        height: 15.447vw;
         grid-column: 2 / 3;
         grid-row: 2 / 3;
     }
     .image-card:nth-of-type(6) > img {
-        width: 16.3125rem;
-        height: 20.25rem;
+        width: 19.107vw;
+        height: 23.719vw;
         grid-column: 3 / 4;
         grid-row: 2 / 3;
     }
     p.image-card-year {
         color: #EBE8FF;
         font-family: "Rebond Grotesque", serif;
-        font-size: 0.75rem;
+        font-size: 0.878vw;
         font-style: normal;
         font-weight: 400;
-        line-height: 100%; /* 0.75rem */
-        letter-spacing: -0.03rem;
+        line-height: 100%; /* 0.878vw */
+        letter-spacing: -0.035vw;
         text-transform: uppercase;
     }
     p.image-card-name {
         color: #EBE8FF;
         font-family: "Ogg Regular", serif;
-        font-size: 1.5rem;
+        font-size: 1.757vw;
         font-style: normal;
         font-weight: 400;
         line-height: 90%; /* 1.35rem */
@@ -454,26 +454,26 @@ Minnesota, HEN</p>
     #awards {
         display: flex;
         justify-content: space-between;
-        margin-top: 12rem;
+        margin-top: 16.398vw;
         position: relative;
     }
     h3.awards-text {
         color: #EBE8FF;
 font-family: "Rebond Grotesque", sans-serif;
-font-size: 1.5rem;
+font-size: 1.757vw;
 font-style: normal;
 font-weight: 400;
 line-height: 90%; /* 1.35rem */
-letter-spacing: -0.06rem;
+letter-spacing: -0.07vw;
 text-transform: uppercase;
     }
     ul#awards-list {
-        width: 47.8rem;
+        width: 55.988vw;
         list-style: none;
         z-index: 2;
     }
     ul#awards-list > li {
-        padding: 2rem 0px;
+        padding: 2.343vw 0px;
         width: 100%;
         display: flex;
         justify-content: space-between;
@@ -489,58 +489,67 @@ text-transform: uppercase;
     p.award-name {
         color: #EBE8FF;
 font-family: "Ogg Regular", serif;
-font-size: 3.125rem;
+font-size: 3.66vw;
 font-style: normal;
 font-weight: 400;
 line-height: 90%; /* 2.8125rem */
-letter-spacing: -0.0625rem;
+letter-spacing: -0.073vw;
     }
     p.award-date {
         color: #EBE8FF;
 font-family: "Ranua", sans-serif;
-font-size: 1.125rem;
+font-size: 1.318vw;
 font-style: normal;
 font-weight: 400;
 line-height: 90%; /* 1.0125rem */
-letter-spacing: -0.01125rem;
+letter-spacing: -0.013vw;
 text-transform: uppercase;
     }
     #naacp-hover {
         position: absolute;
-        top: 10.88rem;
-        left: 6.19rem;
+        width: 44.802vw;
+        top: 12.744vw;
+        left: 7.25vw;
     }
     #webby-hover {
         position: absolute;
-        top: 6.42rem;
-        left: 11.94rem;
+        width: 42.899vw;
+        top: 7.52vw;
+        left: 13.985vw;
     }
     #black-reel-hover {
         position: absolute;
-        top: 11.31rem;
-        left: 12.15rem;
+        width: 34.773vw;
+        top: 13.247vw;
+        left: 14.231vw;
     }
     #people-choice-hover {
         position: absolute;
-        top: 12.94rem;
-        left: 11.87rem;
+        width: 40.922vw;
+        top: 15.157vw;
+        left: 13.903vw;
     }
     #mtv-hover {
         position: absolute;
-        top: 13.12rem;
-        left: 11.94rem;
+        width: 24.231vw;
+        top: 15.367vw;
+        left: 13.985vw;
     }
     #young-artist-hover {
         position: absolute;
-        top: 7.44rem;
-        left: 9.19rem;
+        width: 36.457vw;
+        top: 8.714vw;
+        left: 10.764vw;
+    }
+    #naacp-hover > img, #webby-hover > img, #black-reel-hover > img, #people-choice-hover > img, #mtv-hover > svg, #young-artist-hover > img {
+        width: 100%;
     }
     #about-container {
-        margin-top: 14rem;
+        margin-top: 16.398vw;
         width: 100%;
         display: flex;
         flex-direction: column;
-        gap: 14.75rem;
+        gap: 17.277vw;
     }
     #about-info {
         width: 100%;
@@ -550,11 +559,11 @@ text-transform: uppercase;
     #about-text {
         color: #EBE8FF;
 font-family: "Rebond Grotesque", sans-serif;
-font-size: 1.5rem;
+font-size: 1.757vw;
 font-style: normal;
 font-weight: 400;
 line-height: 90%; /* 1.35rem */
-letter-spacing: -0.06rem;
+letter-spacing: -0.07vw;
 text-transform: uppercase;
     }
     #about-photo {
@@ -562,29 +571,29 @@ text-transform: uppercase;
         height: fit-content;
     }
     #about-photo > img {
-        width: 47.6875rem;
-height: 33rem;
+        width: 55.857vw;
+height: 38.653vw;
 flex-shrink: 0;
     }
     #about-description {
         text-align: left;
         display: grid;
-        max-width: 64.125rem;
+        max-width: 75.11vw;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
-        column-gap: 4.19rem;
-        row-gap: 5rem;
+        column-gap: 4.908vw;
+        row-gap: 5.857vw;
     }
     p.about-description-title-text {
         grid-column: 1 / 3;
         grid-row: 1 / 2;
         color: #EBE8FF;
 font-family: "Ogg Regular";
-font-size: 3.375rem;
+font-size: 3.953vw;
 font-style: normal;
 font-weight: 400;
 line-height: 100%;
-letter-spacing: -0.0675rem;
+letter-spacing: -0.079vw;
     }
     #about-description:nth-child(2) {
         grid-row: 2 / 3;
@@ -597,27 +606,27 @@ letter-spacing: -0.0675rem;
     p.about-description-text {
         color: #EBE8FF;
 font-family: "Rebond Grotesque", sans-serif;
-font-size: 1.125rem;
+font-size: 1.318vw;
 font-style: normal;
 font-weight: 400;
 line-height: 120%;
-letter-spacing: -0.045rem;
+letter-spacing: -0.053vw;
     }
     section.location {
-        margin-top: 16.25rem;
+        margin-top: 19.034vw;
         width: 100%;
         height: fit-content;
-        border-top: solid #B0A9E0 0.0625rem;
-        border-bottom: solid #B0A9E0 0.0625rem;;
+        border-top: solid #B0A9E0 0.073vw;
+        border-bottom: solid #B0A9E0 0.073vw;;
     }
     .location > svg {
         position: relative;
-        top: 3.5rem;
+        top: 4.1vw;
         z-index: 2;
     }
     footer {
-        margin-top: 5.13rem;
-        padding-bottom: 2.5rem;
+        margin-top: 6.009vw;
+        padding-bottom: 2.928vw;
         width: 100%;
         display: flex;
         justify-content: space-between;
@@ -625,39 +634,39 @@ letter-spacing: -0.045rem;
     p.copyright-text {
         color: #E9E1FE;
 font-family: "Rebond Grotesque", sans-serif;
-font-size: 1rem;
+font-size: 1.171vw;
 font-style: normal;
 font-weight: 400;
 line-height: 90%; /* 0.9rem */
-letter-spacing: -0.01rem;
+letter-spacing: -0.012vw;
 text-transform: uppercase;
     }
     .footer-groups {
         display: flex;
-        gap: 2.87rem;
+        gap: 3.362vw;
         text-align: left;
     }
     .contact-links {
         display: flex;
         flex-direction: column;
-        gap: 0.69rem;
+        gap: 0.808vw;
         color: #E9E1FE;
 font-family: "Rebond Grotesque", sans-serif;
-font-size: 1rem;
+font-size: 1.171vw;
 font-style: normal;
 font-weight: 400;
 line-height: 90%; /* 0.9rem */
-letter-spacing: -0.01rem;
+letter-spacing: -0.012vw;
 text-transform: uppercase;
     }
     .footer-groups > p {
         color: #E9E1FE;
 font-family: "Rebond Grotesque", sans-serif;
-font-size: 1rem;
+font-size: 1.171vw;
 font-style: normal;
 font-weight: 400;
 line-height: 140%; /* 1.4rem */
-letter-spacing: -0.01rem;
+letter-spacing: -0.012vw;
 text-transform: uppercase;
     }
     .footer-groups > ul {
@@ -665,11 +674,11 @@ text-transform: uppercase;
         text-decoration: none;
         color: #E9E1FE;
 font-family: "Rebond Grotesque", sans-serif;
-font-size: 1rem;
+font-size: 1.171vw;
 font-style: normal;
 font-weight: 400;
 line-height: 140%; /* 1.4rem */
-letter-spacing: -0.01rem;
+letter-spacing: -0.012vw;
 text-transform: uppercase;
     }
 </style>
@@ -679,91 +688,34 @@ import { defineComponent } from 'vue';
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
+import Lenis from '@studio-freight/lenis'
 
-// const locator = document.getElementsByClassName("location")
-// const child = document.getElementsByTagName("svg")
+//const lenis = new Lenis({
+//  duration: 2,
+//})
+//
+//console.log(lenis)
+//
+//lenis.on('scroll', (e) => {
+//  console.log(e)
+//})
+//
+//function raf(time) {
+//  lenis.raf(time)
+//  requestAnimationFrame(raf)
+//}
+//
+//requestAnimationFrame(raf)
 
-// import Lenis from '@studio-freight/lenis'
+const lenis = new Lenis({
+  duration: 2,
+})
 
-// const lenis = new Lenis({
-//     wrapper: locator,
-//     content: child,
-//     duration: 2,
-//     orientation: 'horizontal',
-//     gestureOrientation: 'horizontal',
-// })
-
-// lenis.on('scroll', (e) => {
-//   console.log(e)
-// })
-
-// function raf(time) {
-//   lenis.raf(time)
-//   requestAnimationFrame(raf)
-// }
-
-// requestAnimationFrame(raf)
-
-// const sections = gsap.utils.toArray('.location')
-
-// // eslint-disable-next-line no-unused-vars
-// let scrollTween = gsap.to(sections, {
-//     xPercent: -100 * (sections.length - 1),
-//     ease: "none",
-//     scrollTrigger: {
-//         trigger: ".location",
-//         pin: true,
-//         scrub: 1,
-//         end: '+=2000',
-//     }
-// })
-
-// const lenis = new Lenis()
-
-// lenis.on('scroll', ScrollTrigger.update)
-
-// gsap.ticker.add((time)=>{
-//   lenis.raf(time * 1000)
-// })
-
-// gsap.ticker.lagSmoothing(0)
-
-// const naacp = document.getElementById('naacp');
-// const webby = document.getElementById('webby');
-// const reel = document.getElementById('reel');
-// const choice = document.getElementById('choice');
-// const mtv = document.getElementById('mtv');
-// const naacphover = document.getElementById('naacp-hover');
-// const artist = document.getElementById('artist');
-// const webbyhover = document.getElementById('webby-hover');
-// const blackreelhover = document.getElementById('black-reel-hover');
-// const peoplechoicehover = document.getElementById('people-choice-hover');
-// const mtvhover = document.getElementById('mtv-hover');
-// const youngartisthover = document.getElementById('young-artist-hover');
-
-// naacp.addEventListener('mouseover', function onHover() {
-//     naacphover.style.display = 'block';
-// });
-
-// webby.addEventListener('mouseover', function onHover() {
-//     webbyhover.style.display = 'block';
-// });
-
-// reel.addEventListener('mouseover', function onHover() {
-//     blackreelhover.style.display = 'block';
-// });
-
-// choice.addEventListener('mouseover', function onHover() {
-//     peoplechoicehover.style.display = 'block';
-// });
-
-// mtv.addEventListener('mouseover', function onHover() {
-//     mtvhover.style.display = 'block';
-// });
-
-// artist.addEventListener('mouseover', function onHover() {
-//     youngartisthover.style.display = 'block';
-// });
+ lenis.on('scroll', ScrollTrigger.update)
+ gsap.ticker.add((time)=>{
+   lenis.raf(time * 1000)
+ })
+ gsap.ticker.lagSmoothing(0)
 
 export default defineComponent({
     name: "HomeView",
