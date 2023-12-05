@@ -6,13 +6,13 @@
             </div>
             <ul class="menu">
                 <li class="menu-item">
-                    <a href="#visual-works">Works</a>
+                    <a href="#visual-works" lenis.scrollTo="#visual-works">Works</a>
                 </li>
                 <li class="menu-item">
-                    <a href="#about-container">About</a>
+                    <a href="#about-container" lenis.scrollTo="#about-container">About</a>
                 </li>
                 <li class="menu-item">
-                    <a href="#contact">Contact</a>
+                    <a href="#contact" lenis.scrollTo="#contact">Contact</a>
                 </li>
             </ul>
             <div class="book-button">
@@ -134,13 +134,13 @@
                 <div id="about-photo"><img src="../assets/images/about-picture.png" alt=""></div>
             </div>
             <div id="about-description">
-                <p class="about-description-title-text">
+                <p class="about-description-title-text animate-aboutText">
                     Yara Sayeh Shahidi was born in Minneapolis, Minnesota, to Keri Salter Shahidi and Afshin Shahidi, a photographer.
                 </p>
-                <p class="about-description-text">
+                <p class="about-description-text animate-aboutText">
                     Yara was destined to be an actress since she was a baby. In her free time, Yara loves learning to cook with her Baba (father), baking with her mommy, learning to speak Farsi, traveling with her family, and conducting science experiments (she wants to build a laboratory in her garage one day). Her favorite subject in school is history–she likes to start everyday learning something new. 
                 </p>
-                <p class="about-description-text">
+                <p class="about-description-text animate-aboutText">
                     She began her career at six weeks old, working along side her mother in commercials and print ads. Yara can be seen in such campaigns as McDonalds, Ralph Lauren, Target, Gap Kids, Disney, Guess Kids, Children’s Place and Disney, just to name a few.
 
 Her work can be seen in her gallery or on IMDB.
@@ -689,7 +689,8 @@ import { defineComponent } from 'vue';
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
-import Lenis from '@studio-freight/lenis'
+import Lenis from '@studio-freight/lenis';
+import SplitType from 'split-type';
 
 //const lenis = new Lenis({
 //  duration: 2,
@@ -708,15 +709,7 @@ import Lenis from '@studio-freight/lenis'
 //
 //requestAnimationFrame(raf)
 
-const lenis = new Lenis({
-  duration: 2,
-})
 
- lenis.on('scroll', ScrollTrigger.update)
- gsap.ticker.add((time)=>{
-   lenis.raf(time * 1000)
- })
- gsap.ticker.lagSmoothing(0)
 
 export default defineComponent({
     name: "HomeView",
@@ -775,7 +768,55 @@ export default defineComponent({
             } else if (element === "artist") {
                 this.showArtist = false;
             }
+        },
+        initializeLenis() {
+            const lenis = new Lenis({
+                duration: 2,
+            })
+
+            lenis.on('scroll', ScrollTrigger.update)
+            gsap.ticker.add((time)=>{
+            lenis.raf(time * 1000)
+            })
+            gsap.ticker.lagSmoothing(0)
+        },
+        animateAboutSectionText() {
+            // eslint-disable-next-line no-unused-vars
+            const aboutDescription = new SplitType(".animate-aboutText");
+            const aboutSectionAnimation = gsap.utils.toArray(".animate-aboutText");
+            console.log(aboutSectionAnimation);
+
+            aboutSectionAnimation.forEach((aboutText) => {
+                const aboutAnimateText = aboutText.querySelectorAll('.line');
+
+                let animationTimeline = gsap.timeline({
+                    scrollTrigger: {
+                        trigger: "#about-description",
+                        start: "top 95%",
+                        end: "80% 60%",
+                        toggleActions: "play none none none",
+                        markers: false,
+                        scrub: 1,
+                    }
+                });
+
+                animationTimeline.from(aboutAnimateText, {
+                    opacity: 0,
+                    yPercent: 130,
+                    stagger: 0.05,
+                    delay: 0.2,
+                    duraton: .5,
+                    ease: "back.out",
+                })
+            })
         }
     },
+    created() {
+        this.initializeLenis();
+        //this.animateInText();
+    },
+    mounted() {
+        this.animateAboutSectionText();
+    }
 });
 </script>
