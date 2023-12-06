@@ -137,13 +137,13 @@
                 <p class="about-description-title-text animate-aboutText">
                     Yara Sayeh Shahidi was born in Minneapolis, Minnesota, to Keri Salter Shahidi and Afshin Shahidi, a photographer.
                 </p>
-                <p class="about-description-text animate-aboutText">
+                <p class="about-description-text animate-aboutText" id="first-grid">
                     Yara was destined to be an actress since she was a baby. In her free time, Yara loves learning to cook with her Baba (father), baking with her mommy, learning to speak Farsi, traveling with her family, and conducting science experiments (she wants to build a laboratory in her garage one day). Her favorite subject in school is history–she likes to start everyday learning something new. 
                 </p>
-                <p class="about-description-text animate-aboutText">
+                <p class="about-description-text animate-aboutText" id="second-grid">
                     She began her career at six weeks old, working along side her mother in commercials and print ads. Yara can be seen in such campaigns as McDonalds, Ralph Lauren, Target, Gap Kids, Disney, Guess Kids, Children’s Place and Disney, just to name a few.
 
-Her work can be seen in her gallery or on IMDB.
+<br><br>Her work can be seen in her gallery or on IMDB.
                 </p>
             </div>
         </section>
@@ -373,15 +373,14 @@ Minnesota, HEN</p>
     }
     #visual-works {
         display: grid;
-        grid-template-columns: 1fr 1fr auto;
+        grid-template-columns: repeat(5, 1fr);
+        justify-content: space-between;
+        min-width: 100%;
+        column-gap: 1.464vw;
         grid-template-rows: auto auto;
-        width: 100%;
         margin-top: 11.757vw;
         row-gap: 9.816vw;
-        column-gap: 5.857vw;
-    }
-    #visual-works div:nth-child(5) {
-        max-width: 30.966vw;
+        position: relative;
     }
     .image-card {
         width: fit-content;
@@ -391,39 +390,52 @@ Minnesota, HEN</p>
         align-items: flex-start;
         gap: 1.171vw;
     }
+    .image-card:nth-of-type(1) {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+    }
     .image-card:nth-of-type(1) > img {
         width: 19.107vw;
         height: 23.06vw;
-        grid-column: 1 / 2;
+    }
+    .image-card:nth-of-type(2) {
+        grid-column: 3 / 5;
         grid-row: 1 / 2;
     }
     .image-card:nth-of-type(2) > img {
         width: 30.966vw;
         height: 37.555vw;
         flex-shrink: 0;
-        grid-column: 2 / 3;
+    }
+    .image-card:nth-of-type(3) {
+        grid-column: 5 / 6;
         grid-row: 1 / 2;
+        justify-self: flex-end;
     }
     .image-card:nth-of-type(3) > img {
         width: 12.299vw;
         height: 15.3vw;
-        grid-column: 3 / 4;
-        grid-row: 1 / 2;
+    }
+    .image-card:nth-of-type(4) {
+        grid-column: 1 / 3;
+        grid-row: 2 / 3;
     }
     .image-card:nth-of-type(4) > img {
         width: 30.966vw;
         height: 35.139vw;
-        grid-column: 1 / 2;
-        grid-row: 2 / 3;
     }
     .image-card:nth-of-type(5) {
-        max-width: 30.966vw;
-        justify-self: flex-end;
+        position: relative;
+        right: -0.586vw;
+        grid-column: 4 / 5;
+        grid-row: 2 / 3;
     }
     .image-card:nth-of-type(5) > img {
         width: 12.445vw;
         height: 15.447vw;
-        grid-column: 2 / 3;
+    }
+    .image-card:nth-of-type(6) {
+        grid-column: 5 / 6;
         grid-row: 2 / 3;
     }
     .image-card:nth-of-type(6) > img {
@@ -451,12 +463,17 @@ Minnesota, HEN</p>
         line-height: 90%; /* 1.35rem */
     }
     #awards {
-        display: flex;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
         justify-content: space-between;
+        min-width: 100%;
+        column-gap: 1.464vw;
         margin-top: 16.398vw;
         position: relative;
     }
     h3.awards-text {
+        grid-column: 1 / 2;
+        text-align: left;
         color: #EBE8FF;
 font-family: "Rebond Grotesque", sans-serif;
 font-size: 1.757vw;
@@ -467,7 +484,8 @@ letter-spacing: -0.07vw;
 text-transform: uppercase;
     }
     ul#awards-list {
-        width: 55.988vw;
+        grid-column: 3 / 6;
+        width: 100%;
         list-style: none;
         z-index: 2;
     }
@@ -551,11 +569,15 @@ text-transform: uppercase;
         gap: 17.277vw;
     }
     #about-info {
-        width: 100%;
-        display: flex;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
         justify-content: space-between;
+        min-width: 100%;
+        column-gap: 1.464vw;
     }
     #about-text {
+        grid-column: 1 / 2;
+        text-align: left;
         color: #EBE8FF;
 font-family: "Rebond Grotesque", sans-serif;
 font-size: 1.757vw;
@@ -566,25 +588,27 @@ letter-spacing: -0.07vw;
 text-transform: uppercase;
     }
     #about-photo {
-        width: fit-content;
+        grid-column: 3 / 6;
+        width: 100%;
         height: fit-content;
     }
     #about-photo > img {
-        width: 55.857vw;
-height: 38.653vw;
+        width: 100%;
+height: auto;
 flex-shrink: 0;
     }
     #about-description {
         text-align: left;
         display: grid;
-        max-width: 75.11vw;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: repeat(5, 1fr);
         grid-template-rows: 1fr 1fr;
-        column-gap: 4.908vw;
+        justify-content: space-between;
+        min-width: 100%;
+        column-gap: 1.464vw;
         row-gap: 5.857vw;
     }
     p.about-description-title-text {
-        grid-column: 1 / 3;
+        grid-column: 1 / 5;
         grid-row: 1 / 2;
         color: #EBE8FF;
 font-family: "Ogg Regular";
@@ -596,11 +620,11 @@ letter-spacing: -0.079vw;
     }
     #about-description:nth-child(2) {
         grid-row: 2 / 3;
-        grid-column: 1 / 2;
+        grid-column: 1 / 3;
     }
     #about-description:nth-child(3) {
         grid-row: 2 / 3;
-        grid-column: 2 / 3;
+        grid-column: 3 / 5;
     }
     p.about-description-text {
         color: #EBE8FF;
@@ -610,6 +634,16 @@ font-style: normal;
 font-weight: 400;
 line-height: 120%;
 letter-spacing: -0.053vw;
+    }
+    #first-grid {
+        grid-row: 2 / 3;
+        grid-column: 1 / 3;
+        max-width: 33.163vw;
+    }
+    #second-grid {
+        grid-row: 2 / 3;
+        grid-column: 3 / 5;
+        max-width: 32.357vw;
     }
     section.location {
         margin-top: 19.034vw;
@@ -784,7 +818,7 @@ export default defineComponent({
             // eslint-disable-next-line no-unused-vars
             const aboutDescription = new SplitType(".animate-aboutText");
             const aboutSectionAnimation = gsap.utils.toArray(".animate-aboutText");
-            console.log(aboutSectionAnimation);
+            //console.log(aboutSectionAnimation);
 
             aboutSectionAnimation.forEach((aboutText) => {
                 const aboutAnimateText = aboutText.querySelectorAll('.line');
