@@ -51,34 +51,34 @@
         <div class="noise"></div>
         <section id="visual-works">
             <div class="image-card">
-                <p class="image-card-year">/2021</p>
+                <p class="image-card-year image-card-1st">/2021</p>
                 <img src="../assets/images/image178.png" alt="" class="image-card-photo">
-                <p class="image-card-name">(Glamour UK)</p>
+                <p class="image-card-name image-card-name-1st">(Glamour UK)</p>
             </div>
             <div class="image-card">
-                <p class="image-card-year">/2018</p>
+                <p class="image-card-year image-card-1st">/2018</p>
                 <img src="../assets/images/image181.png" alt="" class="image-card-photo">
-                <p class="image-card-name">(Peter Pan & Wendy)</p>
+                <p class="image-card-name image-card-name-2nd">(Peter Pan & Wendy)</p>
             </div>
             <div class="image-card">
-                <p class="image-card-year">/2019</p>
+                <p class="image-card-year image-card-1st">/2019</p>
                 <img src="../assets/images/image180.png" alt="" class="image-card-photo">
-                <p class="image-card-name">(Dior Forever)</p>
+                <p class="image-card-name image-card-name-3rd">(Dior Forever)</p>
             </div>
-            <div class="image-card">
-                <p class="image-card-year">/2019</p>
+            <div class="image-card image-card-trigger">
+                <p class="image-card-year image-card-2nd">/2019</p>
                 <img src="../assets/images/image182.png" alt="" class="image-card-photo">
-                <p class="image-card-name">(Selfish Season)</p>
+                <p class="image-card-name image-card-name-4th">(Selfish Season)</p>
             </div>
             <div class="image-card">
-                <p class="image-card-year">/2020</p>
+                <p class="image-card-year image-card-2nd">/2020</p>
                 <img src="../assets/images/image184.png" alt="" class="image-card-photo">
-                <p class="image-card-name">(New Fashion)</p>
+                <p class="image-card-name image-card-name-5th">(New Fashion)</p>
             </div>
             <div class="image-card">
-                <p class="image-card-year">/2017</p>
+                <p class="image-card-year image-card-2nd">/2017</p>
                 <img src="../assets/images/image183.png" alt="" class="image-card-photo">
-                <p class="image-card-name">(Amazing Road)</p>
+                <p class="image-card-name image-card-name-6th">(Amazing Road)</p>
             </div>
         </section>
         <section id="awards">
@@ -821,16 +821,16 @@ export default defineComponent({
             //console.log(aboutSectionAnimation);
 
             aboutSectionAnimation.forEach((aboutText) => {
-                const aboutAnimateText = aboutText.querySelectorAll('.line');
+                const aboutAnimateText = aboutText.querySelectorAll('.word');
 
                 let animationTimeline = gsap.timeline({
                     scrollTrigger: {
                         trigger: "#about-description",
                         start: "top 95%",
-                        end: "80% 60%",
+                        end: "80% 75%",
                         toggleActions: "play none none none",
                         markers: false,
-                        scrub: true,
+                        scrub: 1,
                     }
                 });
 
@@ -840,9 +840,175 @@ export default defineComponent({
                     stagger: 0.05,
                     delay: 0.2,
                     duraton: .5,
+                    ease: "power4.inOut",
+                })
+            })
+        },
+        animateVisualWorksText() {
+            // eslint-disable-next-line no-unused-vars
+            const yearText = new SplitType(".image-card-year");
+            const yearOneTextAnimation = gsap.utils.toArray(".image-card-1st");
+            const yearTwoTextAnimation = gsap.utils.toArray(".image-card-2nd");
+
+            yearOneTextAnimation.forEach((eachYearText) => {
+                const yearAnimateText = eachYearText.querySelectorAll(".char");
+
+                let animationTimeline = gsap.timeline({
+                    scrollTrigger: {
+                        trigger: "#visual-works",
+                        start: "top 95%",
+                        end: "10% 75%",
+                        togleActions: "play none none none",
+                        markers: false,
+                        scrub: 1,
+                    }
+                });
+
+                animationTimeline.from(yearAnimateText, {
+                    opacity: 0,
+                    yPercent: 50,
+                    stagger: 0.05,
+                    delay: 0.2,
+                    duraton: .5,
+                    ease: "power4.out",
+                })
+            });
+            yearTwoTextAnimation.forEach((eachYearText) => {
+                const yearAnimateText = eachYearText.querySelectorAll(".char");
+
+                let animationTimeline = gsap.timeline({
+                    scrollTrigger: {
+                        trigger: ".image-card-trigger",
+                        start: "top 95%",
+                        end: "10% 75%",
+                        togleActions: "play none none none",
+                        markers: false,
+                        scrub: 1,
+                    }
+                });
+
+                animationTimeline.from(yearAnimateText, {
+                    opacity: 0,
+                    yPercent: 50,
+                    stagger: 0.05,
+                    delay: 0.2,
+                    duraton: .5,
                     ease: "power4.out",
                 })
             })
+        },
+        animateVisualWorksNameText() {
+            // eslint-disable-next-line no-unused-vars
+            const nameText = new SplitType(".image-card-name");
+            const imageCard1st = document.querySelector(".image-card-name-1st");
+            const imageCard2nd = document.querySelector(".image-card-name-2nd");
+            const imageCard3rd = document.querySelector(".image-card-name-3rd");
+            const imageCard4th = document.querySelector(".image-card-name-4th");
+            const imageCard5th = document.querySelector(".image-card-name-5th");
+            const imageCard6th = document.querySelector(".image-card-name-6th");
+            const imageCard1stChar = imageCard1st.querySelectorAll(".char");
+            const imageCard2ndChar = imageCard2nd.querySelectorAll(".char");
+            const imageCard3rdChar = imageCard3rd.querySelectorAll(".char");
+            const imageCard4thChar = imageCard4th.querySelectorAll(".char");
+            const imageCard5thChar = imageCard5th.querySelectorAll(".char");
+            const imageCard6thChar = imageCard6th.querySelectorAll(".char");
+            
+            gsap.from(imageCard1stChar, {
+                opacity: 0,
+                yPercent: 50,
+                stagger: 0.05,
+                delay: 0.2,
+                duration: .5,
+                ease: "power4.out",
+                scrollTrigger: {
+                        trigger: ".image-card-name-1st",
+                        start: "top 95%",
+                        end: "10% 75%",
+                        togleActions: "play none none none",
+                        markers: false,
+                        scrub: 1,
+                    }
+            });
+            gsap.from(imageCard2ndChar, {
+                opacity: 0,
+                yPercent: 50,
+                stagger: 0.05,
+                delay: 0.2,
+                duration: .5,
+                ease: "power4.out",
+                scrollTrigger: {
+                        trigger: ".image-card-name-2nd",
+                        start: "top 95%",
+                        end: "10% 75%",
+                        togleActions: "play none none none",
+                        markers: false,
+                        scrub: 1,
+                    }
+            });
+            gsap.from(imageCard3rdChar, {
+                opacity: 0,
+                yPercent: 50,
+                stagger: 0.05,
+                delay: 0.2,
+                duration: .5,
+                ease: "power4.out",
+                scrollTrigger: {
+                        trigger: ".image-card-name-3rd",
+                        start: "top 95%",
+                        end: "10% 75%",
+                        togleActions: "play none none none",
+                        markers: false,
+                        scrub: 1,
+                    }
+            });
+            gsap.from(imageCard4thChar, {
+                opacity: 0,
+                yPercent: 50,
+                stagger: 0.05,
+                delay: 0.2,
+                duration: .5,
+                ease: "power4.out",
+                scrollTrigger: {
+                        trigger: ".image-card-name-4th",
+                        start: "top 95%",
+                        end: "10% 75%",
+                        togleActions: "play none none none",
+                        markers: false,
+                        scrub: 1,
+                    }
+            });
+            gsap.from(imageCard5thChar, {
+                opacity: 0,
+                yPercent: 50,
+                stagger: 0.05,
+                delay: 0.2,
+                duration: .5,
+                ease: "power4.out",
+                scrollTrigger: {
+                        trigger: ".image-card-name-5th",
+                        start: "top 95%",
+                        end: "10% 75%",
+                        togleActions: "play none none none",
+                        markers: false,
+                        scrub: 1,
+                    }
+            });
+            gsap.from(imageCard6thChar, {
+                opacity: 0,
+                yPercent: 50,
+                stagger: 0.05,
+                delay: 0.2,
+                duration: .5,
+                ease: "power4.out",
+                scrollTrigger: {
+                        trigger: ".image-card-name-6th",
+                        start: "top 95%",
+                        end: "10% 75%",
+                        togleActions: "play none none none",
+                        markers: false,
+                        scrub: 1,
+                    }
+            });
         }
     },
     created() {
@@ -851,6 +1017,8 @@ export default defineComponent({
     },
     mounted() {
         this.animateAboutSectionText();
+        this.animateVisualWorksText();
+        this.animateVisualWorksNameText();
     }
 });
 </script>
