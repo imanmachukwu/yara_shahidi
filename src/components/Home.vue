@@ -222,7 +222,7 @@ Minnesota, HEN</p>
         font-style: normal;
         font-weight: 400;
         line-height: 90%; /* 1.8rem */
-        letter-spacing: -0.00.023vw;
+        letter-spacing: -0.023vw;
         text-transform: uppercase;
         display: flex;
         align-items: flex-start;
@@ -830,7 +830,7 @@ export default defineComponent({
                         end: "80% 60%",
                         toggleActions: "play none none none",
                         markers: false,
-                        scrub: 1,
+                        scrub: true,
                     }
                 });
 
@@ -840,7 +840,7 @@ export default defineComponent({
                     stagger: 0.05,
                     delay: 0.2,
                     duraton: .5,
-                    ease: "back.out",
+                    ease: "power4.out",
                 })
             })
         }
