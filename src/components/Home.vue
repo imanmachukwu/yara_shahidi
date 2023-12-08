@@ -821,7 +821,7 @@ export default defineComponent({
             //console.log(aboutSectionAnimation);
 
             aboutSectionAnimation.forEach((aboutText) => {
-                const aboutAnimateText = aboutText.querySelectorAll('.word');
+                const aboutAnimateText = aboutText.querySelectorAll('.line');
 
                 let animationTimeline = gsap.timeline({
                     scrollTrigger: {
@@ -836,11 +836,11 @@ export default defineComponent({
 
                 animationTimeline.from(aboutAnimateText, {
                     opacity: 0,
-                    yPercent: 130,
-                    stagger: 0.05,
+                    yPercent: 32,
+                    stagger: 0.04,
                     delay: 0.2,
                     duraton: .5,
-                    ease: "power4.inOut",
+                    ease: "expo.out",
                 })
             })
         },
