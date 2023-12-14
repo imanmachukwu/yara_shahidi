@@ -19,7 +19,7 @@
                 <svg class="book-btn-svg" xmlns="http://www.w3.org/2000/svg" width="165" height="58" viewBox="0 0 165 58" fill="none">
                     <path d="M164.5 29C164.5 32.7965 162.312 36.4835 158.197 39.9036C154.085 43.3211 148.105 46.4212 140.671 49.0344C125.807 54.2591 105.241 57.5 82.5 57.5C59.7593 57.5 39.193 54.2591 24.3295 49.0344C16.8955 46.4212 10.915 43.3211 6.80284 39.9036C2.68764 36.4835 0.5 32.7965 0.5 29C0.5 25.2035 2.68764 21.5165 6.80284 18.0964C10.915 14.6789 16.8955 11.5788 24.3295 8.96561C39.193 3.74087 59.7593 0.5 82.5 0.5C105.241 0.5 125.807 3.74087 140.671 8.96561C148.105 11.5788 154.085 14.6789 158.197 18.0964C162.312 21.5165 164.5 25.2035 164.5 29Z" stroke="#E9E1FE"/>
                 </svg>
-                <p class="book-btn">Book</p>
+                <p class="book-btn">{{bookBtn}}</p>
             </div>
         </header>
         <section class="landing">
@@ -298,7 +298,6 @@ Minnesota, HEN</p>
         flex-direction: column;
         align-items: center;
         z-index: 2;
-        
     }
     .hero-img {
         width: 41.362vw;
@@ -363,6 +362,7 @@ Minnesota, HEN</p>
     .noise {
         display: none;
         position: absolute;
+        z-index: 35;
         top: 0;
         bottom: 0;
         left: 0;
@@ -716,6 +716,153 @@ line-height: 140%; /* 1.4rem */
 letter-spacing: -0.012vw;
 text-transform: uppercase;
     }
+
+@media screen and (max-width: 375px) {
+    .header {
+        margin-bottom: 13.355vw;
+    }
+    .landing {
+        height: 156.535vw;
+    }
+    .content {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        justify-content: space-evenly;
+        width: 100%;
+    }
+    .hero-img {
+        width: 84.533vw;
+        height: 109.867vw;
+        object-fit: cover;
+        grid-column: 1 / 5;
+        justify-self: center;
+    }
+    .logo {
+        font-size: 8.533vw;
+        letter-spacing: -0.085vw;
+    }
+    .logo-span {
+        font-size: 4.267vw;
+        letter-spacing: -0.043vw;
+    }
+    .book-button {
+        width: 29.6vw;
+        height: 11.467vw;
+    }
+    .book-btn {
+        top: 3.456vw;
+        right: 7.723vw;
+        font-size: 4.8vw;
+        letter-spacing: -0.048vw;
+    }
+        ul.menu {
+            display: none;
+        }
+        #visual-works {
+            margin-top: 32.811vw;
+        }
+        #awards {
+            grid-template-columns: repeat(4, 1fr);
+            justify-content: space-evenly;
+        }
+        h3.awards-text {
+            font-size: 3.733vw;
+            letter-spacing: -0.149vw;
+            grid-column: 1 / 5;  
+        }
+        ul#awards-list {
+            margin-top: 13.312vw;
+            grid-column: 1 / 5;
+        }
+        ul#awards-list > li {
+            padding: 8.533vw 0px;
+        }
+        p.award-name {
+            font-size: 8vw;
+            letter-spacing: -0.16vw;
+        }
+        p.award-date {
+            font-size: 3.733vw;
+            letter-spacing: -0.037vw;
+        }
+        #about-container {
+            margin-top: 32.811vw;
+        }
+        #about-info {
+            grid-template-columns: repeat(4, 1fr);
+            justify-content: space-evenly;
+        }
+        #about-text {
+            display: none;
+        }
+        #about-photo {
+            grid-column: 1 / 5;
+            justify-self: center;
+            width: 91.467vw;
+        }
+        #about-description {
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: auto repeat(2, 1fr);
+            justify-content: space-evenly;
+            row-gap: 7.723vw;
+        }
+        p.about-description-title-text {
+            font-size: 8.533vw;
+            letter-spacing: -0.205vw;
+        }
+        #about-description:nth-child(2) {
+            margin-top: calc(13.355vw - 7.723vw);
+            grid-column: 2 / 5;
+            
+        }
+        #first-grid {
+            margin-top: calc(13.355vw - 7.723vw);
+            grid-column: 2 / 5;
+            max-width: 100%;
+        }
+        #about-description:nth-child(3) {
+            grid-column: 2 / 5;
+        }
+        #second-grid {
+            grid-column: 2 / 5;
+            grid-row: 3 / 4;
+            max-width: 100%;
+        }
+        p.about-description-text {
+            font-size: 3.733vw;
+            letter-spacing: -0.075vw;
+        }
+        section.location {
+            margin-top: 27.989vw;
+        }
+        .location > svg {
+            top: 3.115vw;
+        }
+        footer {
+            display: flex;
+            flex-direction: column reverse;
+            font-size: 4.267vw !important;
+            letter-spacing: -0.043vw !important;
+        }
+        .footer-groups {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: auto auto;
+        }
+        .contact-links {
+            grid-column: 1 / 3;
+            grid-row: 1 / 2;
+        }
+        .footer-groups > p {
+            grid-column: 1 / 3;
+            grid-row: 2 / 3;
+        }
+        .footer-groups > ul {
+            grid-column: 3 / 5;
+            grid-row: 1 / 2;
+            justify-self: flex-end;
+        }
+    }
 </style>
 
 <script>
@@ -725,25 +872,6 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 import Lenis from '@studio-freight/lenis';
 import SplitType from 'split-type';
-
-//const lenis = new Lenis({
-//  duration: 2,
-//})
-//
-//console.log(lenis)
-//
-//lenis.on('scroll', (e) => {
-//  console.log(e)
-//})
-//
-//function raf(time) {
-//  lenis.raf(time)
-//  requestAnimationFrame(raf)
-//}
-//
-//requestAnimationFrame(raf)
-
-
 
 export default defineComponent({
     name: "HomeView",
@@ -755,9 +883,19 @@ export default defineComponent({
             showChoice: false,
             showMtv: false,
             showArtist: false,
+            bookBtn: "Book",
         }
     },
     methods: {
+        setBookBtn() {
+            const vw = document.documentElement.clientWidth;
+
+            if (vw <= 375) {
+                this.bookBtn = "Menu";
+            } else {
+                this.bookBtn = "Book"
+            }
+        },
         showElement(element) {
             this.showNaacp = false;
             this.showWebby = false;
@@ -1019,6 +1157,7 @@ export default defineComponent({
         this.animateAboutSectionText();
         this.animateVisualWorksText();
         this.animateVisualWorksNameText();
+        this.setBookBtn();
     }
 });
 </script>
